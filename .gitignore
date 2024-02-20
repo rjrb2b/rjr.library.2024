@@ -1,1 +1,5 @@
 *.bak
+*.classpath
+*.project
+Library2024_rest/.settings/
+Library2024_rest/src/main/resources/application-dev.yml

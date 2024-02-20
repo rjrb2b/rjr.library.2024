@@ -1,0 +1,28 @@
+server: 
+  port: 8080
+  servlet:
+    context-path: /library2024/be/v0.1
+
+spring:
+  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/library2024_db
+    username: library2024_db
+    password: library2024_db
+    hikari:
+      maximum-lifetime: 300000
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      ddl-auto: none #none create-drop update
+    generate-ddl: true
+    show-sql: true
+    
+logging:
+  level:
+    org:
+      springframework:
+        web: INFO
